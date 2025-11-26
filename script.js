@@ -1,16 +1,36 @@
-// Trigger animation when scrolling
-const animatedElements = document.querySelectorAll('.animate-up');
+document.addEventListener("DOMContentLoaded", () => {
 
-function revealOnScroll() {
-    animatedElements.forEach(el => {
-        const position = el.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
+    // Mobile Menu Toggle
+    const toggle = document.querySelector(".menu-toggle");
+    const mobileMenu = document.querySelector(".mobile-menu");
 
-        if (position < windowHeight - 50) {
-            el.style.animationPlayState = "running";
-        }
+    toggle.addEventListener("click", () => {
+        mobileMenu.style.display =
+            mobileMenu.style.display === "flex" ? "none" : "flex";
     });
-}
 
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll();
+    // Slider Logic
+    let index = 0;
+    const slider = document.getElementById("slider");
+
+    function showSlide() {
+        const slides = document.querySelectorAll(".slide");
+        slider.style.transform = `translateX(${-index * 100}%)`;
+    }
+
+    window.nextSlide = function () {
+        const slides = document.querySelectorAll(".slide");
+        index = (index + 1) % slides.length;
+        showSlide();
+    };
+
+    window.prevSlide = function () {
+        const slides = document.querySelectorAll(".slide");
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide();
+    };
+
+    setInterval(() => {
+        nextSlide();
+    }, 3000);
+});

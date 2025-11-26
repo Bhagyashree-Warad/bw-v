@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMW Automotive Showcase</title>
+    <title>BMW Premium Showcase</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,60 +11,78 @@
     <!-- Header -->
     <header class="header">
         <div class="logo">BMW Auto</div>
+
         <nav>
             <a href="#home">Home</a>
             <a href="#models">Models</a>
             <a href="#about">About</a>
         </nav>
+
+        <div class="menu-toggle">☰</div>
+
+        <div class="mobile-menu">
+            <a href="#home">Home</a>
+            <a href="#models">Models</a>
+            <a href="#about">About</a>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <h1 class="title animate">BMW PERFORMANCE</h1>
-        <p class="subtitle animate">Driving Luxury, Power, and Precision</p>
+        <h1 class="title">THE BMW EXPERIENCE</h1>
+        <p class="subtitle">Luxury • Innovation • Performance</p>
     </section>
 
-    <!-- Models Section -->
+    <!-- Slider -->
+    <section class="slider-container">
+        <div class="slider" id="slider">
+            <div class="slide"><img src="https://i.imgur.com/HxF3O2r.jpeg"></div>
+            <div class="slide"><img src="https://i.imgur.com/Wq2uN8Y.jpeg"></div>
+            <div class="slide"><img src="https://i.imgur.com/1V2pjpT.jpeg"></div>
+        </div>
+
+        <div class="slider-btn prev" onclick="prevSlide()">❮</div>
+        <div class="slider-btn next" onclick="nextSlide()">❯</div>
+    </section>
+
+    <!-- Models -->
     <section id="models" class="models-section">
-        <h2>Popular Models</h2>
+        <h2>Featured Models</h2>
+
         <div class="models-container">
-
-            <div class="card animate-up">
-                <img src="https://i.imgur.com/HxF3O2r.jpeg" alt="BMW M4">
+            <div class="card">
+                <img src="https://i.imgur.com/HxF3O2r.jpeg">
                 <h3>BMW M4</h3>
-                <p>High-performance coupe with aggressive design and thrilling speed.</p>
+                <p>High-performance coupe with dynamic engineering.</p>
             </div>
 
-            <div class="card animate-up">
-                <img src="https://i.imgur.com/Wq2uN8Y.jpeg" alt="BMW i8">
+            <div class="card">
+                <img src="https://i.imgur.com/Wq2uN8Y.jpeg">
                 <h3>BMW i8</h3>
-                <p>Hybrid sports car blending futuristic design with efficiency.</p>
+                <p>Hybrid sports car with futuristic design.</p>
             </div>
 
-            <div class="card animate-up">
-                <img src="https://i.imgur.com/1V2pjpT.jpeg" alt="BMW X7">
+            <div class="card">
+                <img src="https://i.imgur.com/1V2pjpT.jpeg">
                 <h3>BMW X7</h3>
-                <p>Luxury SUV offering space, comfort, and power.</p>
+                <p>Ultimate luxury SUV offering comfort & power.</p>
             </div>
-
         </div>
     </section>
 
     <!-- About -->
     <section id="about" class="about-section">
         <h2>About BMW</h2>
-        <p>
-            BMW is a global leader in premium automobiles, known for performance engineering,
-            iconic design, and exceptional driving experiences.
-        </p>
+        <div class="about-box">
+            BMW stands as a global icon in premium automotive craftsmanship
+            blending innovation, precision engineering, and unparalleled luxury.
+        </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>© 2025 BMW Luxury Automobiles. Designed by You.</p>
+        © 2025 BMW Premium Motors — Designed by You.
     </footer>
 
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
